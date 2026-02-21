@@ -1,0 +1,47 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: "微软雅黑";
+    font-size: 16px;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.nav_top{
+    height: 50px;
+    background-color: grey;
+}
+.header{
+    height: 100px;
+    background-color: blue;
+}
+.header .h-menu{
+    float: right;
+    margin-top: 40px;
+}
+.header .h-menu a{
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
+.banner{
+    height: 400px;
+}
+.banner_left{
+    width: 45%;
+    background-color: pink;
+    float: left;
+}
+.banner_right{
+    width: 55%;
+    background-color: bisque;
+    float: right;
+}
+.footer{
+    height: 100px;
+    background-color: grey;
+}

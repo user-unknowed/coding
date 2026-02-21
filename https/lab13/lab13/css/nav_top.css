@@ -1,0 +1,52 @@
+/* CSS Document */
+.nav_top{
+      height: 30px;
+      width:100%;
+      background: #333333;
+      position: fixed;/*将该盒子固定在页面，不随页面滚动而滚动*/
+      top:0px;/*宽度是body的100%，即浏览器宽度，因此定位时没有
+	  left、right设置，只需设置top、bottom*/
+      z-index: 99;/*滑动时堆叠在其他盒子上方*/}
+.nav_top .nav_top_inner{/*设置nav_top中的子盒子nav_top_inner为网格容器*/
+      height: 100%;/*高度为nav_top父级盒子100%*/
+      display: grid; /* 网格布局容器 */
+      grid-template-columns:70% 18% 12% ;
+	/*三行一列的网格,列的宽度分别为网格容器的 70% 18% 12%*/}
+.nav_top a{
+      color:#aaa ;
+      font-family: "arial black","微软雅黑";
+      text-decoration: none;
+      line-height: 30px;
+      font-size:10px;}
+.nav_top a:hover{
+	 /*超链接的伪类样式，当鼠标覆盖在超链接上，字体颜色为白色*/
+      color: #fff;}
+.nav_top .sep{/*小竖线的颜色*/
+      color: #aaa;}
+#shopcar img{/*图片垂直方向上居中*/
+      vertical-align: middle;}
+#shopcar{/*设置父级容器盒子样式*/
+      float: right;
+      background: #555;
+      text-align: center;
+      position:relative;}
+
+
+#shopcar div{/*二级菜单样式*/
+      font-size: 12px;
+      width: 160px;
+      height: 40px;
+      background: #eee;
+      position: absolute;
+      top:30px;
+      right: 0px;
+      box-shadow:1px 1px 1px 1px rgba(120,120,120,0.3); 
+	/*给二级菜单容器盒子设置半透明阴影*/
+      display: none; /*默认隐藏*/
+}
+#shopcar:hover div{
+      display: block;
+}
+
+
+

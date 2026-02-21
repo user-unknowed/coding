@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <title>CatPhotoApp</title>
+    <!-- CSS样式部分 -->
+    <style>
+      /* 全局样式 */
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;  /* 居中布局 */
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+
+      /* 主要内容区域样式 */
+      main {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;  /* 圆角效果 */
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);  /* 阴影效果 */
+      }
+
+      /* 标题样式 */
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+      }
+
+      /* 图片样式 */
+      img {
+        max-width: 100%;  /* 响应式图片 */
+        border-radius: 8px;
+      }
+
+      /* 图片容器样式 */
+      figure {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      /* 图片说明文字样式 */
+      figcaption {
+        color: #666;
+        font-style: italic;
+      }
+
+      /* 列表样式 */
+      ul, ol {
+        background: #f8f9fa;
+        padding: 20px 40px;
+        border-radius: 5px;
+      }
+
+      li {
+        margin: 10px 0;
+      }
+
+      /* 表单样式 */
+      .contact-form {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      /* 表单标签样式 */
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #2c3e50;
+      }
+
+      /* 输入框样式 */
+      input, textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      /* 按钮样式 */
+      button {
+        background: #2c3e50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      /* 按钮悬停效果 */
+      button:hover {
+        background: #34495e;
+      }
+
+      /* 页脚样式 */
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+  <!-- 主要内容区域 -->
+  <main>
+    <h1>CatPhotoApp</h1>
+    <!-- 照片展示区域 -->
+    <section>
+      <h2>Cat Photos</h2>
+      <p>Everyone loves <a href="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg">cute cats</a> online!</p>
+      <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+      <!-- 猫咪图片展示 -->
+      <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+    </section>
+
+    <!-- 猫咪列表区域 -->
+    <section>
+      <h2>Cat Lists</h2>
+      <!-- 猫咪喜欢的东西列表 -->
+      <h3>Things cats love:</h3>
+      <ul>
+        <li>catnip</li>
+        <li>laser pointers</li>
+        <li>lasagna</li>
+      </ul>
+      <!-- 猫咪和千层面图片 -->
+      <figure>
+        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+        <figcaption>Cats <em>love</em> lasagna.</figcaption>  
+      </figure>
+
+      <!-- 猫咪讨厌的东西列表 -->
+      <h3>Top 3 things cats hate:</h3>
+      <ol>
+        <li>flea treatment</li>
+        <li>thunder</li>
+        <li>other cats</li>
+      </ol>
+      <!-- 猫咪群体图片 -->
+      <figure>
+        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+        <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+      </figure>
+    </section>
+
+    <!-- 用户输入表单区域 -->
+    <section>
+      <h2>Cat Form</h2>
+      <form class="contact-form">
+        <!-- 姓名输入 -->
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <!-- 邮箱输入 -->
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <!-- 图片上传 -->
+        <div class="form-group">
+          <label for="cat-photo">Share your cat photo:</label>
+          <input type="file" id="cat-photo" name="cat-photo" accept="image/*">
+        </div>
+        <!-- 故事输入 -->
+        <div class="form-group">
+          <label for="message">Your cat's story:</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- 页脚区域 -->
+  <footer>
+    <p>
+      No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+    </p>
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage 记忆登录界面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            padding: 40px 30px;
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .input-with-icon {
+            position: relative;
+        }
+        
+        .input-with-icon i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #7f8c8d;
+            font-size: 18px;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 14px 14px 14px 45px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s;
+            background-color: #f8f9fa;
+        }
+        
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #3498db;
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+        
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .remember-me {
+            display: flex;
+            align-items: center;
+        }
+        
+        .remember-me input[type="checkbox"] {
+            margin-right: 8px;
+            width: 18px;
+            height: 18px;
+            accent-color: #3498db;
+            cursor: pointer;
+        }
+        
+        .remember-me label {
+            color: #2c3e50;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .forgot-password {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .forgot-password:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .btn-clear {
+            background: linear-gradient(to right, #e74c3c, #c0392b);
+            margin-bottom: 0;
+        }
+        
+        .btn-clear:hover {
+            box-shadow: 0 7px 15px rgba(231, 76, 60, 0.3);
+        }
+        
+        .login-status {
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 14px;
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        
+        .success {
+            background-color: rgba(46, 204, 113, 0.1);
+            color: #27ae60;
+            border: 1px solid #2ecc71;
+            display: block;
+        }
+        
+        .error {
+            background-color: rgba(231, 76, 60, 0.1);
+            color: #c0392b;
+            border: 1px solid #e74c3c;
+            display: block;
+        }
+        
+        .info {
+            background-color: rgba(52, 152, 219, 0.1);
+            color: #2980b9;
+            border: 1px solid #3498db;
+            display: block;
+        }
+        
+        .storage-info {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .storage-info h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .storage-info p {
+            color: #7f8c8d;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #7f8c8d;
+            font-size: 13px;
+        }
+        
+        .data-display {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #f1f8ff;
+            border-radius: 8px;
+            font-family: 'Consolas', monospace;
+            font-size: 12px;
+            word-break: break-all;
+            max-height: 100px;
+            overflow-y: auto;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+        
+        .tab-container {
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 12px;
+            background: none;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            color: #7f8c8d;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .tab.active {
+            color: #3498db;
+        }
+        
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #3498db;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-user-circle"></i> 智能登录系统</h1>
+            <p>使用 LocalStorage 实现表单记忆功能</p>
+        </div>
+        
+        <div class="tab-container">
+            <button class="tab active" data-tab="login">登录</button>
+            <button class="tab" data-tab="register">注册</button>
+            <button class="tab" data-tab="data">存储数据</button>
+        </div>
+        
+        <!-- 登录表单 -->
+        <div id="login-tab" class="tab-content active">
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="username" name="username" placeholder="请输入用户名" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="请输入密码" required>
+                    </div>
+                </div>
+                
+                <div class="remember-forgot">
+                    <div class="remember-me">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <label for="rememberMe">记住我</label>
+                    </div>
+                    <a href="#" class="forgot-password">忘记密码？</a>
+                </div>
+                
+                <button type="submit" class="btn">
+                    <i class="fas fa-sign-in-alt"></i> 登录
+                </button>
+                
+                <button type="button" id="clearStorage" class="btn btn-clear">
+                    <i class="fas fa-trash-alt"></i> 清除记忆数据
+                </button>
+            </form>
+            
+            <div id="loginStatus" class="login-status"></div>
+        </div>
+        
+        <!-- 注册表单 -->
+        <div id="register-tab" class="tab-content">
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regUsername">用户名</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user-plus"></i>
+                        <input type="text" id="regUsername" name="regUsername" placeholder="请输入用户名" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regEmail">邮箱</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="text" id="regEmail" name="regEmail" placeholder="请输入邮箱" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regPassword">密码</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="regPassword" name="regPassword" placeholder="请输入密码" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regConfirmPassword">确认密码</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="regConfirmPassword" name="regConfirmPassword" placeholder="请再次输入密码" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">
+                    <i class="fas fa-user-plus"></i> 注册
+                </button>
+            </form>
+            
+            <div id="registerStatus" class="login-status"></div>
+        </div>
+        
+        <!-- 存储数据展示 -->
+        <div id="data-tab" class="tab-content">
+            <div class="storage-info">
+                <h3><i class="fas fa-database"></i> LocalStorage 数据</h3>
+                <p>这里显示当前存储在浏览器 LocalStorage 中的所有登录相关数据。</p>
+                <div id="storageData" class="data-display">
+                    加载中...
+                </div>
+                <p style="margin-top: 10px; font-size: 12px;">
+                    <i class="fas fa-info-circle"></i> 
+                    这些数据仅保存在当前浏览器中，清除浏览器数据将删除这些信息。
+                </p>
+            </div>
+        </div>
+        
+        <div class="storage-info">
+            <h3><i class="fas fa-lightbulb"></i> 功能说明</h3>
+            <p>
+                1. 勾选"记住我"后，用户名和密码将保存到浏览器的 LocalStorage 中<br>
+                2. 下次访问时，表单将自动填充保存的数据<br>
+                3. 清除数据按钮可以删除所有保存的登录信息<br>
+                4. 数据仅保存在当前浏览器中，不会上传到服务器
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p>© 2023 LocalStorage 登录系统 | 仅供学习演示</p>
+        </div>
+    </div>
+
+    <script>
+        // DOM 元素
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const rememberMeCheckbox = document.getElementById('rememberMe');
+        const clearStorageBtn = document.getElementById('clearStorage');
+        const loginStatus = document.getElementById('loginStatus');
+        const registerStatus = document.getElementById('registerStatus');
+        const storageDataElement = document.getElementById('storageData');
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        // 存储键名
+        const STORAGE_KEYS = {
+            USERNAME: 'login_username',
+            PASSWORD: 'login_password',
+            REMEMBER_ME: 'login_remember_me',
+            USERS: 'registered_users'
+        };
+
+        // 初始化 - 检查并填充保存的数据
+        function init() {
+            // 检查是否保存了"记住我"选项
+            const rememberMe = localStorage.getItem(STORAGE_KEYS.REMEMBER_ME);
+            
+            if (rememberMe === 'true') {
+                rememberMeCheckbox.checked = true;
+                
+                // 填充保存的用户名和密码
+                const savedUsername = localStorage.getItem(STORAGE_KEYS.USERNAME);
+                const savedPassword = localStorage.getItem(STORAGE_KEYS.PASSWORD);
+                
+                if (savedUsername) {
+                    usernameInput.value = savedUsername;
+                }
+                
+                if (savedPassword) {
+                    passwordInput.value = savedPassword;
+                }
+                
+                showMessage(loginStatus, `已自动填充保存的登录信息`, 'info');
+            }
+            
+            // 更新存储数据显示
+            updateStorageDisplay();
+        }
+
+        // 显示消息
+        function showMessage(element, message, type = 'info') {
+            element.textContent = message;
+            element.className = `login-status ${type}`;
+            
+            // 3秒后自动隐藏消息
+            if (type !== 'info') {
+                setTimeout(() => {
+                    element.className = 'login-status';
+                }, 3000);
+            }
+        }
+
+        // 保存登录数据到 LocalStorage
+        function saveLoginData(username, password, rememberMe) {
+            if (rememberMe) {
+                localStorage.setItem(STORAGE_KEYS.USERNAME, username);
+                localStorage.setItem(STORAGE_KEYS.PASSWORD, password);
+                localStorage.setItem(STORAGE_KEYS.REMEMBER_ME, 'true');
+                showMessage(loginStatus, `登录信息已保存到本地存储`, 'success');
+            } else {
+                // 如果不记住我，清除保存的数据
+                clearLoginData();
+            }
+        }
+
+        // 清除登录数据
+        function clearLoginData() {
+            localStorage.removeItem(STORAGE_KEYS.USERNAME);
+            localStorage.removeItem(STORAGE_KEYS.PASSWORD);
+            localStorage.removeItem(STORAGE_KEYS.REMEMBER_ME);
+            usernameInput.value = '';
+            passwordInput.value = '';
+            rememberMeCheckbox.checked = false;
+            showMessage(loginStatus, `本地存储的登录信息已清除`, 'info');
+            updateStorageDisplay();
+        }
+
+        // 获取注册的用户数据
+        function getRegisteredUsers() {
+            const usersJson = localStorage.getItem(STORAGE_KEYS.USERS);
+            return usersJson ? JSON.parse(usersJson) : [];
+        }
+
+        // 保存注册的用户
+        function saveRegisteredUser(user) {
+            const users = getRegisteredUsers();
+            users.push(user);
+            localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(users));
+        }
+
+        // 检查用户名是否已存在
+        function isUsernameExists(username) {
+            const users = getRegisteredUsers();
+            return users.some(user => user.username === username);
+        }
+
+        // 验证登录
+        function validateLogin(username, password) {
+            const users = getRegisteredUsers();
+            return users.find(user => user.username === username && user.password === password);
+        }
+
+        // 更新存储数据显示
+        function updateStorageDisplay() {
+            const rememberMe = localStorage.getItem(STORAGE_KEYS.REMEMBER_ME) === 'true';
+            const savedUsername = localStorage.getItem(STORAGE_KEYS.USERNAME);
+            const savedPassword = localStorage.getItem(STORAGE_KEYS.PASSWORD);
+            const users = getRegisteredUsers();
+            
+            let displayHTML = '';
+            
+            if (rememberMe && savedUsername) {
+                displayHTML += `<strong>记住的登录信息：</strong><br>`;
+                displayHTML += `用户名: ${savedUsername}<br>`;
+                displayHTML += `密码: ${'*'.repeat(savedPassword ? savedPassword.length : 0)}<br><br>`;
+            } else {
+                displayHTML += `<strong>记住的登录信息：</strong> 无<br><br>`;
+            }
+            
+            displayHTML += `<strong>注册用户 (${users.length}个)：</strong><br>`;
+            if (users.length > 0) {
+                users.forEach((user, index) => {
+                    displayHTML += `${index + 1}. ${user.username} (${user.email})<br>`;
+                });
+            } else {
+                displayHTML += `暂无注册用户`;
+            }
+            
+            storageDataElement.innerHTML = displayHTML;
+        }
+
+        // 处理登录表单提交
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = usernameInput.value.trim();
+            const password = passwordInput.value;
+            const rememberMe = rememberMeCheckbox.checked;
+            
+            if (!username || !password) {
+                showMessage(loginStatus, '请填写用户名和密码', 'error');
+                return;
+            }
+            
+            // 模拟登录验证
+            const user = validateLogin(username, password);
+            
+            if (user) {
+                // 保存登录数据
+                saveLoginData(username, password, rememberMe);
+                
+                // 显示成功消息
+                showMessage(loginStatus, `登录成功！欢迎回来，${username}`, 'success');
+                
+                // 模拟跳转
+                setTimeout(() => {
+                    showMessage(loginStatus, `正在跳转到用户面板...`, 'info');
+                }, 1500);
+            } else {
+                showMessage(loginStatus, '用户名或密码错误', 'error');
+            }
+        });
+
+        // 处理注册表单提交
+        registerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('regUsername').value.trim();
+            const email = document.getElementById('regEmail').value.trim();
+            const password = document.getElementById('regPassword').value;
+            const confirmPassword = document.getElementById('regConfirmPassword').value;
+            
+            // 验证表单
+            if (!username || !email || !password || !confirmPassword) {
+                showMessage(registerStatus, '请填写所有字段', 'error');
+                return;
+            }
+            
+            if (password !== confirmPassword) {
+                showMessage(registerStatus, '两次输入的密码不一致', 'error');
+                return;
+            }
+            
+            if (password.length < 6) {
+                showMessage(registerStatus, '密码长度至少为6位', 'error');
+                return;
+            }
+            
+            if (isUsernameExists(username)) {
+                showMessage(registerStatus, '用户名已存在', 'error');
+                return;
+            }
+            
+            // 保存新用户
+            const newUser = {
+                username,
+                email,
+                password,
+                registeredAt: new Date().toISOString()
+            };
+            
+            saveRegisteredUser(newUser);
+            showMessage(registerStatus, `注册成功！现在可以用 ${username} 登录`, 'success');
+            
+            // 清空注册表单
+            registerForm.reset();
+            
+            // 更新存储数据显示
+            updateStorageDisplay();
+            
+            // 自动切换到登录标签
+            switchTab('login');
+        });
+
+        // 清除存储数据按钮点击事件
+        clearStorageBtn.addEventListener('click', function() {
+            if (confirm('确定要清除所有保存的登录数据吗？')) {
+                clearLoginData();
+            }
+        });
+
+        // 标签切换功能
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                switchTab(tabId);
+            });
+        });
+
+        function switchTab(tabId) {
+            // 更新标签状态
+            tabs.forEach(tab => {
+                if (tab.getAttribute('data-tab') === tabId) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+            
+            // 更新内容显示
+            tabContents.forEach(content => {
+                if (content.id === `${tabId}-tab`) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+            
+            // 如果是数据标签，更新显示
+            if (tabId === 'data') {
+                updateStorageDisplay();
+            }
+        }
+
+        // 初始化应用
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|win32">
+      <Configuration>Debug</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|win32">
+      <Configuration>Release</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E24DE503-A0C7-363A-A03F-3118767311F2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\ababa\Desktop\coding\hello-algo-main\codes\c\.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\ababa\Desktop\coding\hello-algo-main\codes\c\.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\ababa\Desktop\coding\hello-algo-main\codes\c\.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\ababa\Desktop\coding\hello-algo-main\codes\c\.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ababa\Desktop\coding\hello-algo-main\codes\c\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Building Custom Rule C:/Users/ababa/Desktop/coding/hello-algo-main/codes/c/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/ababa/Desktop/coding/hello-algo-main/codes/c -BC:/Users/ababa/Desktop/coding/build --check-stamp-file C:/Users/ababa/Desktop/coding/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Users\ababa\Desktop\coding\build\CMakeFiles\3.31.6-msvc6\CMakeCCompiler.cmake;C:\Users\ababa\Desktop\coding\build\CMakeFiles\3.31.6-msvc6\CMakeRCCompiler.cmake;C:\Users\ababa\Desktop\coding\build\CMakeFiles\3.31.6-msvc6\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">C:\Users\ababa\Desktop\coding\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Building Custom Rule C:/Users/ababa/Desktop/coding/hello-algo-main/codes/c/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|win32'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/ababa/Desktop/coding/hello-algo-main/codes/c -BC:/Users/ababa/Desktop/coding/build --check-stamp-file C:/Users/ababa/Desktop/coding/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Users\ababa\Desktop\coding\build\CMakeFiles\3.31.6-msvc6\CMakeCCompiler.cmake;C:\Users\ababa\Desktop\coding\build\CMakeFiles\3.31.6-msvc6\CMakeRCCompiler.cmake;C:\Users\ababa\Desktop\coding\build\CMakeFiles\3.31.6-msvc6\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">C:\Users\ababa\Desktop\coding\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Building Custom Rule C:/Users/ababa/Desktop/coding/hello-algo-main/codes/c/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/ababa/Desktop/coding/hello-algo-main/codes/c -BC:/Users/ababa/Desktop/coding/build --check-stamp-file C:/Users/ababa/Desktop/coding/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Users\ababa\Desktop\coding\build\CMakeFiles\3.31.6-msvc6\CMakeCCompiler.cmake;C:\Users\ababa\Desktop\coding\build\CMakeFiles\3.31.6-msvc6\CMakeRCCompiler.cmake;C:\Users\ababa\Desktop\coding\build\CMakeFiles\3.31.6-msvc6\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">C:\Users\ababa\Desktop\coding\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Building Custom Rule C:/Users/ababa/Desktop/coding/hello-algo-main/codes/c/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/ababa/Desktop/coding/hello-algo-main/codes/c -BC:/Users/ababa/Desktop/coding/build --check-stamp-file C:/Users/ababa/Desktop/coding/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Users\ababa\Desktop\coding\build\CMakeFiles\3.31.6-msvc6\CMakeCCompiler.cmake;C:\Users\ababa\Desktop\coding\build\CMakeFiles\3.31.6-msvc6\CMakeRCCompiler.cmake;C:\Users\ababa\Desktop\coding\build\CMakeFiles\3.31.6-msvc6\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">C:\Users\ababa\Desktop\coding\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\ZERO_CHECK.vcxproj">
+      <Project>{84E38938-26C8-37E6-B841-3189C2C3483B}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_array_and_linkedlist\array.vcxproj">
+      <Project>{B9C8594E-C4FF-3CC5-AFAC-3CA54ABCC4D6}</Project>
+      <Name>array</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_tree\array_binary_tree.vcxproj">
+      <Project>{CADB6C61-0C14-3A25-9361-7D6C59D708AC}</Project>
+      <Name>array_binary_tree</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_stack_and_queue\array_deque.vcxproj">
+      <Project>{0E5E7964-932C-3AE9-827D-FE73527BB687}</Project>
+      <Name>array_deque</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_hashing\array_hash_map.vcxproj">
+      <Project>{430CE926-B6E7-3750-90B4-0F76953CDF60}</Project>
+      <Name>array_hash_map</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_stack_and_queue\array_queue.vcxproj">
+      <Project>{AFF712CF-87CE-3BB2-810E-6734FCD04542}</Project>
+      <Name>array_queue</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_stack_and_queue\array_stack.vcxproj">
+      <Project>{75EA3CEB-9D57-3FCE-A981-77984B1064B4}</Project>
+      <Name>array_stack</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_tree\avl_tree.vcxproj">
+      <Project>{F01BC762-3E26-3E82-AC01-DA605E1BB6B1}</Project>
+      <Name>avl_tree</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_searching\binary_search.vcxproj">
+      <Project>{0E25213B-75EE-3851-85F6-E88E3C993DBE}</Project>
+      <Name>binary_search</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_searching\binary_search_edge.vcxproj">
+      <Project>{12238815-5B80-3B76-B17B-E97FE71C7234}</Project>
+      <Name>binary_search_edge</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_searching\binary_search_insertion.vcxproj">
+      <Project>{C62DAA84-E962-3279-9F21-39B20AAB509E}</Project>
+      <Name>binary_search_insertion</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_divide_and_conquer\binary_search_recur.vcxproj">
+      <Project>{BB580C35-E696-368F-8BD8-CF6FADACA6DF}</Project>
+      <Name>binary_search_recur</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_tree\binary_search_tree.vcxproj">
+      <Project>{F4F63B61-4168-3F2B-83CE-D0C884F337B7}</Project>
+      <Name>binary_search_tree</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_tree\binary_tree.vcxproj">
+      <Project>{078A961B-133F-38C7-B37B-55FD68B6BDFC}</Project>
+      <Name>binary_tree</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_tree\binary_tree_bfs.vcxproj">
+      <Project>{5407E866-ABEF-334B-8AA0-A4893F508E9C}</Project>
+      <Name>binary_tree_bfs</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_tree\binary_tree_dfs.vcxproj">
+      <Project>{658D3874-FB3E-3BD8-BA0F-A80579A51396}</Project>
+      <Name>binary_tree_dfs</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_sorting\bubble_sort.vcxproj">
+      <Project>{62DAFBC4-0A9D-3873-8E65-9F5E7AE3B19C}</Project>
+      <Name>bubble_sort</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_sorting\bucket_sort.vcxproj">
+      <Project>{892BA1CC-5FED-30BB-A9B3-2684326354A4}</Project>
+      <Name>bucket_sort</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_divide_and_conquer\build_tree.vcxproj">
+      <Project>{FD8AE16B-966C-3482-98D8-2FC07685F874}</Project>
+      <Name>build_tree</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_dynamic_programming\climbing_stairs_constraint_dp.vcxproj">
+      <Project>{B4C2B161-DE5C-3D63-8C5A-061C207576DB}</Project>
+      <Name>climbing_stairs_constraint_dp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_dynamic_programming\coin_change.vcxproj">
+      <Project>{8FC55F48-1E11-3FB7-9B85-4429C606BE1A}</Project>
+      <Name>coin_change</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_greedy\coin_change_greedy.vcxproj">
+      <Project>{77436434-4968-304A-8451-9DCA86B445E9}</Project>
+      <Name>coin_change_greedy</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_dynamic_programming\coin_change_ii.vcxproj">
+      <Project>{A079C7BC-148D-386A-86E3-A3DDE96C9902}</Project>
+      <Name>coin_change_ii</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_sorting\counting_sort.vcxproj">
+      <Project>{A9A49DA6-9138-3E05-B748-E2291AD29CDB}</Project>
+      <Name>counting_sort</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_dynamic_programming\edit_distance.vcxproj">
+      <Project>{9283608D-4F01-34EE-AA1B-212394073E79}</Project>
+      <Name>edit_distance</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_greedy\fractional_knapsack.vcxproj">
+      <Project>{A925E970-9997-38C2-AE14-66F40B29DC49}</Project>
+      <Name>fractional_knapsack</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_graph\graph_adjacency_list_test.vcxproj">
+      <Project>{6F6E5845-6378-3D85-BC82-7DF180A1FD8A}</Project>
+      <Name>graph_adjacency_list_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_graph\graph_adjacency_matrix.vcxproj">
+      <Project>{4B2DE0C9-A830-3C4E-8756-DFA7B03FFF30}</Project>
+      <Name>graph_adjacency_matrix</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_graph\graph_bfs.vcxproj">
+      <Project>{2F75E64C-8774-3D8C-AB18-27657217877F}</Project>
+      <Name>graph_bfs</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_graph\graph_dfs.vcxproj">
+      <Project>{339F16C3-ACF6-33EE-A448-796651010917}</Project>
+      <Name>graph_dfs</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_divide_and_conquer\hanota.vcxproj">
+      <Project>{6BA071CD-2B16-3F64-A298-E6BA85DCAA32}</Project>
+      <Name>hanota</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_hashing\hash_map_chaining.vcxproj">
+      <Project>{3222A9C8-C452-360C-8B7D-168FB6952934}</Project>
+      <Name>hash_map_chaining</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_hashing\hash_map_open_addressing.vcxproj">
+      <Project>{3BF5981F-C06D-3E1E-8F04-2852C4B33929}</Project>
+      <Name>hash_map_open_addressing</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_sorting\heap_sort.vcxproj">
+      <Project>{9B9EB880-385B-3549-96AA-DC7256D24B0E}</Project>
+      <Name>heap_sort</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_sorting\insertion_sort.vcxproj">
+      <Project>{788E7B7A-BB56-349F-B335-7567DD7D7FDE}</Project>
+      <Name>insertion_sort</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_computational_complexity\iteration.vcxproj">
+      <Project>{C9151999-34E2-3133-A00F-1C458B22FC94}</Project>
+      <Name>iteration</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_dynamic_programming\knapsack.vcxproj">
+      <Project>{D8D2DDB7-80D5-346E-96C2-F29F7642CD98}</Project>
+      <Name>knapsack</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_array_and_linkedlist\linked_list.vcxproj">
+      <Project>{BF0EF715-8379-3621-8177-C0BBE064509B}</Project>
+      <Name>linked_list</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_stack_and_queue\linkedlist_deque.vcxproj">
+      <Project>{7EE79DF8-AFA7-3C18-860B-6F5DAC226579}</Project>
+      <Name>linkedlist_deque</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_stack_and_queue\linkedlist_queue.vcxproj">
+      <Project>{DEFC9B03-9DBF-359D-A0CE-19C68FC7138F}</Project>
+      <Name>linkedlist_queue</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_stack_and_queue\linkedlist_stack.vcxproj">
+      <Project>{553313EF-DAF9-3CA3-9B66-6BA55C2167B3}</Project>
+      <Name>linkedlist_stack</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_greedy\max_capacity.vcxproj">
+      <Project>{EE19479E-34D0-37DE-92AE-7B05B845D8FB}</Project>
+      <Name>max_capacity</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_greedy\max_product_cutting.vcxproj">
+      <Project>{D7C4EF2E-337B-333F-8A0D-EE17836BB474}</Project>
+      <Name>max_product_cutting</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_sorting\merge_sort.vcxproj">
+      <Project>{C0095F07-3A05-30DD-A08D-BB4ED197AE58}</Project>
+      <Name>merge_sort</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_dynamic_programming\min_cost_climbing_stairs_dp.vcxproj">
+      <Project>{FDFF1BF6-6E41-3155-91EE-9C8622D815A5}</Project>
+      <Name>min_cost_climbing_stairs_dp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_dynamic_programming\min_path_sum.vcxproj">
+      <Project>{AC2352E2-99C2-33F6-970F-6EE0AEF33870}</Project>
+      <Name>min_path_sum</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_heap\my_heap_test.vcxproj">
+      <Project>{913ED800-114C-3CEB-A98C-78276B424791}</Project>
+      <Name>my_heap_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_array_and_linkedlist\my_list.vcxproj">
+      <Project>{FF6FA746-2562-3A88-9720-9EE3514A2216}</Project>
+      <Name>my_list</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_backtracking\n_queens.vcxproj">
+      <Project>{3EBE7D73-B04B-33E8-B3F5-23A1E4F84976}</Project>
+      <Name>n_queens</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_backtracking\permutations_i.vcxproj">
+      <Project>{9A7C06FD-2424-3B5B-8068-34537E273B40}</Project>
+      <Name>permutations_i</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_backtracking\permutations_ii.vcxproj">
+      <Project>{F30F87AF-2194-350D-A93E-A3E6110F3016}</Project>
+      <Name>permutations_ii</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_backtracking\preorder_traversal_i_compact.vcxproj">
+      <Project>{0EA48311-A58B-3893-AB02-6D8EE8B4DFC8}</Project>
+      <Name>preorder_traversal_i_compact</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_backtracking\preorder_traversal_ii_compact.vcxproj">
+      <Project>{3AE1927C-CB28-3C3E-86FA-937368C5EB04}</Project>
+      <Name>preorder_traversal_ii_compact</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_backtracking\preorder_traversal_iii_compact.vcxproj">
+      <Project>{F503CCC6-5FA9-3CE3-A3CC-A61E5B161E07}</Project>
+      <Name>preorder_traversal_iii_compact</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_backtracking\preorder_traversal_iii_template.vcxproj">
+      <Project>{4064F4AF-4EDB-31BD-907C-3A2A217354EB}</Project>
+      <Name>preorder_traversal_iii_template</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_sorting\quick_sort.vcxproj">
+      <Project>{A4F53E9F-5DA1-37B6-8EBC-D9EE91366B58}</Project>
+      <Name>quick_sort</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_sorting\radix_sort.vcxproj">
+      <Project>{F635945B-6F39-37F2-ACA3-9D2092B2F648}</Project>
+      <Name>radix_sort</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_computational_complexity\recursion.vcxproj">
+      <Project>{539834F9-7262-3C5F-9519-2AECDF359252}</Project>
+      <Name>recursion</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_sorting\selection_sort.vcxproj">
+      <Project>{D041D63D-5BAF-388B-BEA8-8A980F4A6126}</Project>
+      <Name>selection_sort</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_hashing\simple_hash.vcxproj">
+      <Project>{9D7CBC22-D9ED-3694-87E5-9855D73286C3}</Project>
+      <Name>simple_hash</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_computational_complexity\space_complexity.vcxproj">
+      <Project>{4E903664-9CC6-371C-B9B4-850CD9B00337}</Project>
+      <Name>space_complexity</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_backtracking\subset_sum_i.vcxproj">
+      <Project>{4D96D2A5-0229-3D65-B587-0152A516F384}</Project>
+      <Name>subset_sum_i</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_backtracking\subset_sum_i_naive.vcxproj">
+      <Project>{D11E17CC-B87A-3E3B-B4FC-97C6DC2CF4CC}</Project>
+      <Name>subset_sum_i_naive</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_backtracking\subset_sum_ii.vcxproj">
+      <Project>{40A955EA-C544-3883-AA7B-CC64C5C1F918}</Project>
+      <Name>subset_sum_ii</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_computational_complexity\time_complexity.vcxproj">
+      <Project>{12299B19-F3A1-36CB-BF43-9B4E67115706}</Project>
+      <Name>time_complexity</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_heap\top_k.vcxproj">
+      <Project>{BCB7A530-3301-3BA7-B023-A9C58648AC91}</Project>
+      <Name>top_k</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_searching\two_sum.vcxproj">
+      <Project>{E6623DDF-94AC-3541-91D1-9555A18EB9A4}</Project>
+      <Name>two_sum</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_dynamic_programming\unbounded_knapsack.vcxproj">
+      <Project>{86B156AE-9C30-30C0-B08A-370A16B69E8F}</Project>
+      <Name>unbounded_knapsack</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ababa\Desktop\coding\build\chapter_computational_complexity\worst_best_time_complexity.vcxproj">
+      <Project>{5CC2B471-19B9-3403-A183-9D827164AA6B}</Project>
+      <Name>worst_best_time_complexity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

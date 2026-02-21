@@ -1,0 +1,24 @@
+/* CSS Document */
+.content{
+        display:grid;/*设置该盒子为网格容器*/
+		grid-template-columns:repeat(5,1fr);
+		/*设置网格容器中网格列的宽度为父级容器的1/5 */
+        grid-auto-rows: minmax(300px,auto);
+	    /*设置网格容器中网格行的高度将会随内容自动调整，最小为300px */
+        grid-gap:14px;
+		/*两个网格单元之间的网格横向间距和网格纵向间距为14px*/
+  }
+
+.pic{  
+      border: 1px solid #eee;
+  }
+.pic img{
+    width: 90%;
+}
+.pic:first-child{  grid-row:1/3;  }
+/*class属性值为pic的第一个标记即网格单元跨1行3列*/
+.pic:first-child img{
+    width: 100%;
+}
+/*class属性值为pic的第一个标记的子标记img的宽度为父级容器的100% */
+

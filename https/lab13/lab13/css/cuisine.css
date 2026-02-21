@@ -1,0 +1,251 @@
+/* 菜系介绍页面样式 */
+.cuisine-intro {
+    padding: 50px 0;
+}
+
+.cuisine-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cuisine-header h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cuisine-media {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.cuisine-media img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cuisine-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cuisine-content h2 {
+    font-size: 24px;
+    color: #c23531;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.cuisine-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.cuisine-highlights {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.cuisine-highlights ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.cuisine-highlights li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.view-dishes-btn {
+    display: block;
+    width: 200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* 经典菜品页面样式 */
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px 0;
+}
+
+.dish-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.dish-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.dish-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.dish-item:hover img {
+    transform: scale(1.1);
+}
+
+.dish-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* 菜谱详情页面样式 */
+.recipe-detail {
+    padding: 50px 0;
+}
+
+.recipe-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.recipe-header h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.recipe-meta {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+}
+
+.recipe-main-image {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.recipe-main-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .recipe-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.ingredients-section,
+.steps-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.recipe-section h2 {
+    font-size: 24px;
+    color: #c23531;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ingredients-list {
+    list-style: none;
+}
+
+.ingredients-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ingredients-list li:last-child {
+    border-bottom: none;
+}
+
+.ingredient-name {
+    font-weight: 500;
+}
+
+.ingredient-amount {
+    color: #666;
+}
+
+.steps-list {
+    list-style: decimal;
+    padding-left: 20px;
+}
+
+.steps-list li {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.cooking-tips {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.cooking-tips h2 {
+    font-size: 24px;
+    color: #c23531;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cooking-tips ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.cooking-tips li {
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.8;
+}

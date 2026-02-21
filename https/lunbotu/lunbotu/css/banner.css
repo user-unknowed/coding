@@ -1,0 +1,173 @@
+/* CSS Document */
+.banner_l>#caidan{
+
+    width: 100%;
+    height: 100%;
+    background-color:#787676;
+    position:relative;/*设置主菜单定位方式*/
+}
+#caidan>ul{
+    font-size: 14px;
+    list-style-type: none;
+}
+#caidan>ul>li{
+    height:36px;
+    line-height: 36px;
+    padding-left: 20px; 	
+}
+#caidan>ul>li:hover{
+    background: #f60;
+}
+#caidan a{
+    display: inline-block;/* */
+    width: 80%;
+    text-decoration: none;
+    color: #FFF;
+}
+#caidan>ul>li:hover{
+    background-color:#f60 ;
+}
+#caidan span{
+    font-weight: bold;
+    color: #fff;
+}
+ /*
+.banner_r img{  
+	width: 100%; 
+	height: 100%;
+	display: block; 
+}
+*/
+
+/* 二级菜单 */
+#caidan .submenu{
+      width:600px;
+      background: #fff;
+      position: absolute;/*子菜单的定位方式*/
+      left:100%;
+      top:0;
+      bottom: 0;
+      display:none; /*子菜单默认不显示（当鼠标覆盖在主菜单项上时才显示）*/
+      border: 1px solid red;
+      z-index: 99;
+      }
+#caidan ul>li:hover .submenu{
+      display: block;    /* 当鼠标覆盖在主菜单项上时，显示子菜单 */
+      }    
+#caidan ol{
+      list-style-type: none;/* 设置项目符号不显示 */
+      font-size: 12px;
+      display: flex;   /* 设置无序列表为弹性盒子 */
+      flex-wrap:wrap; /* 换行 */
+      flex-direction:column;/* 设置子元素在父容器中由上向下排列 */
+      width: auto; /* 子元素内容来自动扩展弹性盒子的宽度 */
+      /* height:400px; */
+      height: 100%;
+    }
+#caidan ol>li{
+      background: #fff;
+      height: 70px;
+      width: 200px;
+      line-height: 70px;
+      flex-grow: 1; /*弹性盒子子元素属性：0：当容器有剩余空间时,不扩展，保持原始大小；1：等分剩余空间 */
+      flex-shrink: 0; /*弹性盒子子元素属性：0:当容器空间不足时,不收缩，保持原始大小; 1：空间不足时同步缩小  */
+      }
+#caidan ol span{
+      font-size: 10px;
+      color: #000;
+      }
+#caidan ol img{
+      vertical-align:middle; /*垂直方向对齐方式为居中 */
+      width: 20%;
+      }
+
+      /* <ul>
+					<li><img src="image/banner.jpg" alt=""></li>
+					<li><img src="image/banner02.jpg" alt=""></li>
+					<li><img src="image/banner03.jpg" alt=""></li>
+				</ul> */
+/* css轮播图 */
+.banner_r{
+    width: 75%;
+    height:380px;   
+    position: relative; /* 使得内部absolute绝对定位的元素（如指示器label）可以参考这个容器位置进行偏移。 */    
+    overflow: hidden;/* 若图片尺寸比banner_r大，隐藏溢出部分 */
+}
+
+/* 设置整个列表ul的宽度为容器banner_r宽度的三倍（因为有三张图片），使 3 个li能完整横向排列，并启用过渡效果以实现平滑的动画。 */
+.banner_r ul{
+    padding: 0;/*内边距0 */
+    width: calc(100% * 3);/* calc() 函数动态计算宽度 = 父容器宽度 × 3 */
+   transition: 0.5s;  /*过渡属性，为 <ul> 元素的所有可过渡属性添加 0.5秒 的平滑动画效果 */
+}
+
+/* 每个列表项li占据三分之一的容器ul宽度，确保所有图片横向排列。 */
+.banner_r li{
+    float: left; /* 使块级元素li能在同一行显示 */
+    width:calc(100% / 3);/* 计算单个列表项li宽度 = 父容器ul宽度 ÷ 3。  ul的宽度 = 3 * 单个li的宽度 = 3 * banner_r的宽度*/
+    height: 380px;
+    /* list-style: none; */
+    list-style-type: none;/* 列表符号不显示 */
+    line-height: 500px;
+    font-size: 50px;
+}
+
+/* 保证图片按照容器li的高度自适应调整宽度，保持图片比例不变。 */
+.banner_r img{   
+    width: auto;
+    height: 380px;
+}
+
+/* 对所有的指示器label应用统一的样式，包括位置、大小、形状（圆形）、鼠标指针样式以及悬停时的颜色变化。
+   选择for属性值以“indicator”开头的所有label元素（指示器） */
+.banner_r label[for^="indicator"]{   
+    position: absolute;/* 绝对定位，参考对象是设置了position: relative; 的banner_r元素 */
+    top: 90%;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 50%;/* 正方形边框的四个角都设置50%会呈现出圆形形状 */
+    cursor: pointer;/*光标：指针；当鼠标指针悬停在元素上时，应该显示的光标类型，pointer是一只手或者手指指向的样子 */
+    transition: 0.3s;
+}
+
+/*  根据各自的left值将三个指示器label水平排列。
+    for属性值为“indicator1”的label元素 */
+.banner_r label[for="indicator1"]{
+    left: 44%;
+}
+.banner_r label[for="indicator2"]{
+    left: 49%;
+}
+.banner_r label[for="indicator3"]{
+    left: 54%;
+}
+
+/* 当某个单选按钮被选中时，相应地调整图片列表ul的margin-left属性，使不同的图片出现在视窗中；
+   同时改变与其绑定的指示器label的颜色，以表示当前展示的是哪一张图片。
+  （ 选择器解读：  
+        #indicator1:checked 表示id=indicator1的元素（单选按钮）被选中时；
+        ~ 是通用兄弟选择器，只能选择 后面的兄弟元素，不能选择前面的或嵌套的；
+        ~ ul表示：在 id=indicator1 后面、同一层级的所有 <ul> 元素；
+      综合一起：当  id 为 indicator1 的单选按钮处于选中状态时，选中它后面同级的 <ul> 元素，并对其应用{}内的样式。
+    ） */
+#indicator1:checked ~ ul{
+    margin-left: 0; /* 左侧外边距为0，显现第1个列表项li，也就是显示第1张图片 */
+}
+#indicator2:checked ~ ul{
+    margin-left: -100%; /* 左侧外边距向前移动父级容器banner_r宽度的100%，显现第2个列表项li，也就是显示第2张图片 */
+}
+#indicator3:checked ~ ul{
+    margin-left: -200%; /* 左侧外边距向前移动父级容器banner_r宽度的200%，显现第3个列表项li，也就是显示第3张图片 */
+}
+/* 单选按钮type="radio"被选中时 改变与其绑定的指示器label的颜色 */
+ #indicator1:checked ~ label[for="indicator1"]{
+    background-color: #fff;
+}
+#indicator2:checked ~ label[for="indicator2"]{
+    background-color: #fff;
+}
+#indicator3:checked ~ label[for="indicator3"]{
+    background-color: #fff;
+}
+

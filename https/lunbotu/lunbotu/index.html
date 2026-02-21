@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>首页</title>
+	  <link href="css/index.css" rel="stylesheet" type="text/css">
+	  <link href="css/nav_top.css" rel="stylesheet" type="text/css">
+	  <link href="css/header.css" rel="stylesheet" type="text/css">
+	  <link  href="css/banner.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+	<!-- 顶部导航 -->
+	  <div class="nav_top">
+	  		<div class="nav_top_inner main">
+				<!--第一列 导航菜单-->
+				<div>				
+					<a href="https://www.mi.com/" target="_self" title="小米商城首页">小米商城</a>  <span class="sep">&nbsp;|&nbsp;</span>
+					<a href="#">MIUI</a>       <span class="sep">&nbsp;|&nbsp;</span>
+					<a href="#">loT</a>        <span class="sep">&nbsp;|&nbsp;</span>
+					<a href="">云服务</a>       <span class="sep">&nbsp;|&nbsp;</span>
+					<a href="">金融</a>         <span class="sep">&nbsp;|&nbsp;</span>
+					<a href="">有品</a>         <span class="sep">&nbsp;|&nbsp;</span>
+					<a href="">小爱开放平台</a>  <span class="sep">&nbsp;|&nbsp;</span>
+					<a href="">企业团购</a>      <span class="sep">&nbsp;|&nbsp;</span>
+					<a href="">资质证照</a>
+				</div>
+				<!--第二列 登录注册导航菜单-->
+				<div>
+					<a href="">登录</a>          <span class="sep">&nbsp;|&nbsp;</span>
+					<a href="register.html" target="_blank">注册</a>      <span class="sep">&nbsp;|&nbsp;</span>
+					<a href="">消息通知</a>				
+				</div>
+				<!--第三列 购物车-->
+				<div id="shopcar">
+					<a href="#"><img src="image/shopcar2.png" width="20px"> 购物车</a>
+					<div>您的购物车还是空的</div>					
+				</div>
+		    </div>	  
+	  </div>
+	<!-- 头 -->
+	  <div class="header main">
+		      <!--第一列 logo -->   
+	  		  <div class="logo"><img src="image/logo.PNG" ></div>
+              <!--第二列 主导航菜单-->
+		      <div class="h-menu">
+		            <a href="guanggao.html" target="_blank">小米手机</a>   &nbsp;&nbsp;&nbsp;
+		            <a href="#">RedMi红米</a>  &nbsp;&nbsp;&nbsp;
+		            <a href="#">电视</a>       &nbsp;&nbsp;&nbsp;
+		            <a href="#">笔记本</a>     &nbsp;&nbsp;&nbsp;
+		            <a href="#">家电</a>       &nbsp;&nbsp;&nbsp;
+		            <a href="#">路由器</a>     &nbsp;&nbsp;&nbsp;
+		            <a href="#">智能硬件</a>   &nbsp;&nbsp;&nbsp;
+		            <a href="#">服务</a>       &nbsp;&nbsp;&nbsp;
+		            <a href="#">社区</a>       &nbsp;&nbsp;&nbsp;
+		      </div>
+			  <!--第三列 -->
+		      <div class="search">
+				<!-- 实验14添加的内容 文本框控件和搜索图像按钮-->
+				    <form action="" method="get">
+		                  <input type="text" name="search" id="search" placeholder="RedmiPro" />
+						  <button type="submit"><img src="image/zoom.PNG" height="40" ></button>
+		            </form>
+			  </div>     	  
+	  </div>
+	  
+      <!-- 主体内容部分 -->
+	  <div class="banner main">
+            <!-- 左侧 垂直导航菜单 -->
+	  		<div class="banner_l main">
+				<div id="caidan">
+					 <ul>
+						<li> <a href="#">手机 电话卡</a>  <span>&gt;</span> </li>
+						<li> <a href="#">电视 盒子</a>    <span>&gt;</span> </li>
+						<li> <a href="#"> 显示器</a>      <span>&gt;</span> </li>
+						<li> <a href="#">家电 插线板</a>  <span>&gt;</span> </li>
+						<li> <a href="#">出行 穿戴</a>    <span>&gt;</span> 
+							<!-- 二级菜单 -->
+							<div class="submenu">
+                                <ol>
+                                      <li> <img src="image/menu/A1.jpg" > <span>小米手环</span> </li>
+                                      <li> <img src="image/menu/A2.jpg" > <span>小米手环</span> </li>
+                                      <li> <img src="image/menu/A3.jpg" > <span>小米手环</span> </li>
+                                      <li> <img src="image/menu/A4.jpg" > <span>小米手环</span> </li>
+                                      <li> <img src="image/menu/A5.jpg" > <span>小米手环</span> </li>
+                                      <li> <img src="image/menu/A6.jpg" > <span>小米手环</span> </li>
+                                      <li> <img src="image/menu/B1.png" > <span>小米手环</span> </li>
+                                      <li> <img src="image/menu/B2.png" > <span>小米手环</span> </li>
+                                      <li> <img src="image/menu/B3.jpg" > <span>小米手环</span> </li>
+                                </ol>
+                            </div>
+							<!-- div.submenu>ol>li*9>img[src]+span{小米} -->
+						</li>
+						<li> <a href="#">智能 路由器</a>  <span>&gt;</span> </li>
+						<li> <a href="#">电源 配件</a>    <span>&gt;</span> </li>
+						<li> <a href="#">健康 儿童</a>    <span>&gt;</span> </li>
+						<li> <a href="#">耳机 音响</a>    <span>&gt;</span> </li>
+						<li> <a href="#">生活 箱包</a>    <span>&gt;</span> </li>
+				   </ul>
+				</div>
+			</div>
+            <!-- 右侧 轮播图 .banner_r:width: 75%;height:380px;  
+			B站视频教学：
+			https://www.bilibili.com/video/BV1E3411Y7PG/?spm_id_from=333.337.search-card.all.click&vd_source=0d769fb9afc6f61659445fda45a59c3e
+			https://www.bilibili.com/video/BV1Bt4y1S7kv/?spm_id_from=333.337.search-card.all.click&vd_source=0d769fb9afc6f61659445fda45a59c3e 
+			-->
+	  		<div class="banner_r main">
+				 <!-- 
+				  使用单选按钮type="radio" 和hidden 来创建不可见的选择按钮（指示器），这些按钮用于控制显示哪一张图片，它们共享同一个名字name="indicator"以便它们作为一组单选按钮工作。
+				  每个<label>元素都与一个<input>元素相关联（通过for属性匹配<input>的id），提供可以点击的可见指示器。当用户点击某个指示器时，实际上是在选择相应的单选按钮。
+				 -->
+				<input type="radio" name="indicator" id="indicator1" checked hidden>
+				<label for="indicator1"></label>        
+				<input type="radio" name="indicator" id="indicator2" hidden>
+				<label for="indicator2"></label>        
+				<input type="radio" name="indicator" id="indicator3" hidden>
+				<label for="indicator3"></label>
+				<!-- 在无序列表<ul>的列表项<li>中存放轮播图片 -->
+				<ul>
+					<li><img src="image/banner.jpg" alt=""></li>
+					<li><img src="image/banner_1.jpg" alt=""></li>
+					<li><img src="image/bannaer_2.png" alt=""></li>
+				</ul>
+			</div>
+	  </div>
+     <!-- 页脚 -->
+	  <div class="footer main">
+		<div>Web课程设计 Copyright &copy;2017-2025</div>
+	</div>
+
+  </body>
+</html>

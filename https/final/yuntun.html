@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="css/index.css">
+            <link rel="stylesheet" href="css/add.css">
+            <style type="text/css">
+                /* 修复步骤显示问题：将flex布局改为垂直排列 */
+                .steps {
+                    display: flex;
+                    flex-direction: column; /* 设置为垂直排列 */
+                    margin: 20px;
+                    padding: 20px;
+                    background-color: #fff;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                }
+                .steps .h2 {
+                    margin-bottom: 15px;
+                    color: #d32f2f;
+                    font-size: 24px;
+                }
+                .steps ul {
+                    list-style-position: inside;
+                    padding-left: 20px;
+                }
+                .steps ul li img {
+                    max-width: 100%;
+                    height: auto;
+                    margin: 10px 0;
+                    border-radius: 4px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="nav_top">
+                    <div class="nav_top_title">
+                        <img src="img/logo.png" alt="">
+                        <h1 class="h1">中国美食</h1>
+                        <div class="h-menu">
+                            <a href="index.html">首页</a>
+                            <a href="yuntun.html">云南美食</a>
+                            <a href="more.html">更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="steps">
+                <p class="h2">制作步骤</p>
+                <ul>
+                    <li>1.包云吞/买云吞，包制手法如下：<br>
+                    <img src="img/zf.png"></li>
+                    <li>2.云吞煮水</li>
+                    <li>3.煮到1min左右捞出</li>
+                    <li>4.把提前备好的猪骨汤倒入云吞中</li>
+                    <li>5.再煮15s左右，云吞就煮好啦</li>
+                </ul>
+            </div>
+        </body>
