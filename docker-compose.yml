@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  coding:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: coding-environment:latest
+    container_name: coding-container
+    volumes:
+      - .:/root/coding
+    working_dir: /root/coding
+    stdin_open: true
+    tty: true
+    environment:
+      - DEBIAN_FRONTEND=noninteractive
+    command: /bin/bash
