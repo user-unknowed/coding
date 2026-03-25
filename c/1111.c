@@ -1,12 +1,12 @@
 #include <stdio.h>
 int main()
 {
-	int i,j£¬k=1,n=1;
+	int i,j,k=1,n=1;
 	for(n;n<=9;++n)
 	{
 		if(k==n)
 		{
-			printf("\n")£»
+			printf("\n");
 		}
 		else
 		{

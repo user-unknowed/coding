@@ -1,14 +1,17 @@
 #include<stdio.h>
 #include <math.h>
+double triangle_area(double a, double b, double c);
+
 int main()
 {
 	double a,b,c;
-	printf("ÊäÈë±ß³¤£º\n");
+	printf("è¯·è¾“å…¥ä¸‰è§’å½¢è¾¹é•¿\n");
 	scanf("%lf%lf%lf",&a,&b,&c);
-	printf("s = %lf", triangle-area(a,b,c););
+	printf("s = %lf", triangle_area(a,b,c));
 	return 0;
 }
-double triangle-area(double a,double b, double c)
+
+double triangle_area(double a, double b, double c)
 {
 	double s, p;
 	p=(a+b+c)/2;

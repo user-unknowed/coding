@@ -29,7 +29,7 @@ pip install pywinauto
 示例：
 
 ```powershell
-python .\convert_complements.py 119 -119 86 -126 -67 -88 91 -17 -69 110 --width 8 --verify-exe "C:\\Users\\你\\Desktop\\验证补码.exe"
+python .\convert_complements.py 119 -119 86 -126 -67 -88 91 -17 -69 110 --width 8 --verify-exe "C:\Users\你\Desktop\验证补码.exe"
 ```
 
 注意：GUI 自动化对目标程序窗口结构敏感；如果脚本无法读取窗口文本，脚本仍会把程序窗口显示出来，供你手动查看。
